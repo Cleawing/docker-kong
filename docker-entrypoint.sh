@@ -26,7 +26,7 @@ file_env() {
 
 file_env 'KONG_PG_PASSWORD'
 
-if [[ z - "$KONG_PG_PASSWORD" ]]; then
+if [[ -z "$KONG_PG_PASSWORD" ]]; then
   echo >&2 'You need to specify one of KONG_PG_PASSWORD or KONG_PG_PASSWORD_FILE'
   exit 1
 fi
